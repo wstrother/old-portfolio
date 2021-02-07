@@ -1,0 +1,23 @@
+{% assign portfolio = site.data.portfolio %}
+
+<div id="portfolio">
+    {% for project in portfolio %}
+    <div class="portfolio-project">
+        <span class="project-name">
+            {{ project.name }}
+        </span>
+
+        <span class="project-language">
+            {{ project.project-language}}
+        </span>
+
+        <div class="project-links">
+            {% for link in project.links %}
+            <a class="github-link" href="https://github.com/wstrother/{{ link.repo }}">
+                {{ link.text }}
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</div>

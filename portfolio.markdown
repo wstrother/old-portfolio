@@ -5,4 +5,6 @@ permalink: /portfolio.html
 nav-position: 4
 ---
 
-This is a simple static website I made to showcase my resume and a portfolio of projects that I might be working on at any given time.
+Here's a list of projects I've been working on intermittently for various spans of time. Follow the link to the Github repo to read more about each one.
+
+{%- include portfolio.html -%}

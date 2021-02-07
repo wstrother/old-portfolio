@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Monster Fight",
+        "language": "Angular (front-end) and Flask/SQLalchemy (back-end)",
+        "links": [
+            {"text": "Front End", "repo": "monster-fight-frontend"},
+            {"text": "Back End", "repo": "monster-fight-backend"}
+        ]
+    },
+
+    {
+        "name": "ZSquirrel",
+        "language": "Python",
+        "links": [{"text": "Github", "repo": "ZSquirrel-2.7"}]
+    },
+
+    {
+        "name": "AHP Twitch Bot",
+        "language": "Python",
+        "links": [{"text": "Github", "repo": "ahp_twitch_bot"}]
+    },
+
+    {
+        "name": "AHP Stream Layout",
+        "language": "Node/Javascript",
+        "links": [{"text": "Github", "repo": "ahp_stream_layout"}]
+    },
+
+    {
+        "name": "AHP MIDI Controller",
+        "language": "Python",
+        "links": [{"text": "Github", "repo": "ahp-midi-controller"}]
+    }
+]

@@ -4,4 +4,4 @@ title: Home
 nav-position: 1
 ---
 
-Content here
+Welcome...
