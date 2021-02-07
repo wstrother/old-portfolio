@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+content {
+    @extend %standard-margin;
+    @include pretty-font(12pt);
+    display: block;
+    padding: 3px;
+    width: 65%;
+}
+
+p {
+    text-indent: 1rem;
+}
+
+.nav-header {
+    width: 95%;
+    @extend %panel-bg;
+    @extend %standard-margin;
+
+    display: flex;
+    justify-content: space-evenly;
+
+    margin-bottom: 1rem;
+}
+
+.nav-link {
+    @extend %link-block;
+    @include pretty-font(14pt);
+
+    &.current {
+        background-color: rgba(0, 0, 0, .25);
+    }
+}
+
+span.nav-link {
+    cursor: default;
+}
+
+@import 'resume';

@@ -1,0 +1,53 @@
+$sans-font-name: 'Quicksand', 'Arial', sans-serif;
+$serif-font-name: 'Saira', 'Times New Roman', serif;
+
+@mixin pretty-font($size) {
+    font-size: $size;
+    font-family: $sans-font-name;
+}
+
+@mixin serif-font($size) {
+    font-size: $size;
+    font-family: $serif-font-name;
+}
+
+$panel-color: #9fa7b1;
+
+%panel-bg {
+    box-shadow: 2px 2px 3px black;
+    background-color: $panel-color;
+    border-radius: 5px;
+}
+
+$margin-size: 2rem;
+
+%standard-margin {
+    margin-left: $margin-size;
+    margin-right: $margin-size;
+}
+
+$link-color: white;
+$link-hover: lighten($link-color, 5);
+$link-padding: 20px;
+
+%link {
+    color: $link-color;
+    text-decoration: none;
+
+    &:hover {
+        color: $link-hover;
+        text-decoration: underline;
+    }
+
+    &.current {
+        color: $link-hover;
+        text-decoration: none;
+        &:hover { text-decoration: none }
+    }
+}
+
+%link-block {
+    @extend %link;
+    padding: $link-padding;
+    display: block;
+}

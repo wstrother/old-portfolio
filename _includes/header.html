@@ -1,0 +1,15 @@
+<div class="nav-header">
+  {% assign pages = site.pages | sort: "nav-position" %}
+
+    {% for p in pages %}
+      {% if p.nav-position %}
+
+        {% if p.title != page.title %}
+          <a href="{{ p.url | relative_url }}" class="nav-link">{{ p.title }}</a>
+        {% else %}
+          <span class="nav-link current">{{ p.title }}</span>
+        {% endif %}
+
+      {% endif %}
+  {% endfor %}
+</div>

@@ -1,0 +1,80 @@
+{
+    "contact": {
+        "name": "Wyatt Strother",
+        "phone": "706 - 461 - 9994",
+        "email": "wyatt.strother@gmail.com",
+        "github": "wstrother",
+        "website": "wstrother.github.io"
+    },
+
+
+    "summary": "Extremely motivated and self-taught programming enthusiast that seeks to secure employment as a front-end web developer working with Javascript or Python",
+
+    "programming": [
+        {
+            "name":  "Javascript",
+            "timeframe": "5 years",
+            "description": "Long term experience using Javascript for DOM manipulation using native ES6 syntax and the JQuery library as well as specific frameworks/technologies such as:",
+            "frameworks": [
+                {"name": "Node", "timeframe": "Since 2017"},
+                {"name": "React", "timeframe": "Since 2017"},
+                {"name": "Angular/Typescript", "timeframe": "Since 2021"}
+            ]
+        },
+        {
+            "name": "Python",
+            "timeframe": "7 years",
+            "description": "Very strong grasp of the Python programming language for scripting as well as building modular/extensible applications for a variety of purposes, including more recently a web server and relational database with:",
+            "frameworks": [
+                {"name": "Flask/SQLAlchemy", "timeframe": "Since 2021"}
+            ]
+        },
+        {
+            "name": "HTML/CSS/SASS",
+            "timeframe": "10 years",
+            "description": "Long term experience with using HTML for web design with SASS/CSS to create extensible, reactive and modern website front ends"
+        },
+        {
+            "name": "PHP",
+            "timeframe": "5 years",
+            "description": "Experience using PHP to dynamically generate web pages and REST APIs, as well as relational databases with:",
+            "frameworks": [
+                {"name": "Laravel", "timeframe": "Since 2017"}
+            ]
+        },
+        {
+            "name": "SQL",
+            "timeframe": "5 years",
+            "description": "Understanding of relational databases fundamentals including using ORM libraries to generate database models and building REST APIs that can be employed by front end web applications"
+        },
+        {
+            "name": "Git/Github",
+            "timeframe": "5 years",
+            "description": "Strong grasp of usign Git and Github for version control, including branching repositories to add new features and merging and resolving conflicts"
+        }
+    ],
+
+    "other": [
+        {
+            "name": "Adobe Photoshop/Illustrator",
+            "timeframe":"10 years",
+            "description": "Very comfortable with digital image manipulation to generate raster and vector images"
+        },
+
+        {
+            "name": "Digital Audio Production",
+            "timeframe": "10 years",
+            "description": "Over a decade of experience working with various DAWs to produce and mix music, as well as professional experience engineering music recording sessions"
+        }
+    ],
+
+    "education": [
+        {
+            "name": "2017 Fall Code Bootcamp",
+            "institution": "Clubhou.se and Augusta Technical College",
+            "description": "Credit for 360 contract hours in full stack development"
+        }
+    ],
+
+    "references": []
+}

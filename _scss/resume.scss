@@ -1,0 +1,159 @@
+%resume-title {
+    @include pretty-font(18pt);
+    font-variant: small-caps;
+    letter-spacing: 2px;
+}
+
+$lighter-color: rgb(73, 73, 73);
+
+#resume {
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &>* {
+        width: 100%;
+    }
+
+    margin-bottom: 2rem;
+}
+
+$col-width: 25%;
+$row-height: 30px;
+
+.resume-header {
+    display: grid;
+    grid-template-rows: repeat(3, $row-height);
+    grid-template-columns: repeat(5, $col-width);
+    justify-content: space-evenly;
+
+    box-shadow: 0 2px 3px -2px rgba(0, 0, 0, 50);
+    margin-bottom: 10px;
+}
+
+.resume-name {
+    @extend %resume-title;
+    font-size: 20pt;
+
+    grid-column-start: 1;
+    grid-column-end: -1;
+
+    justify-self: center;
+    align-self: center;
+}
+
+.resume-phone, .resume-email, .resume-github, .resume-website {
+    display: flex;
+    align-items: center;
+    color: $lighter-color;
+    width: 250px;
+}
+
+.resume-phone, .resume-email {
+    grid-column-start: 2;
+    justify-content: end;
+}
+
+.resume-github, .resume-website {
+    grid-column-start: 4;
+}
+
+.resume-github::before {
+    content: ' ';
+    display: block;
+    background-image: url('../images/github.png');
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    padding-right: 3px;
+}
+
+@mixin resume-section($name) {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+
+    &::before {
+        content: $name;
+        color: black;
+        font-variant: small-caps;
+        @extend %resume-title;
+        margin-bottom: 5px;
+        margin-top: 10px;
+    }
+
+    margin-bottom: 10px;
+}
+
+.resume-summary {
+    @include resume-section("Summary");
+    color: $lighter-color;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+%items-section {
+    font-size: 11pt;
+    margin-bottom: 10px;
+    padding-left: 20%;
+    
+    .name { 
+        font-variant: small-caps;
+        letter-spacing: 1px;
+        font-size: 12pt;
+        margin-left: 5px;
+    }
+    
+    .timeframe { 
+        font-style: italic;
+        font-size: 10.5pt;
+        margin-left: 10px;
+        &::before {
+            font-style: normal;
+            content: '(';
+        }
+        &::after {
+            font-style: normal;
+            content: ')';
+        }
+    }
+
+    .description {
+        display: block;
+        margin-left: 15px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        width: 65%;
+    }
+}
+
+.resume-programming {
+    @include resume-section("Programming");
+    @extend %items-section;    
+}
+
+
+.resume-language, .resume-other-skill {
+    margin-bottom: 15px;
+}
+
+.resume-frameworks {
+    margin-left: 2rem;
+    .name { font-size: 11pt; }
+}
+
+.resume-other {
+    @include resume-section("Other Skills");
+    @extend %items-section;
+}
+
+.resume-education {
+    @include resume-section("Education");
+    @extend %items-section;
+
+    .institution {
+        margin-left: 10px;
+    }
+}

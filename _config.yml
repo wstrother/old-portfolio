@@ -1,0 +1,12 @@
+title: Wyatt Strother - Resume and Portfolio
+email: wyatt.strother@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  
+url: "http://wstrother.github.io"
+github_username:  wstrother
+font_str: Ubuntu+Mono|Quicksand|Saira
+
+# Build settings
+sass:
+  sass_dir: _scss
+  style: compressed

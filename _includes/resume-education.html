@@ -1,0 +1,19 @@
+{% assign education = site.data.resume.education %}
+
+<div class="resume-education">
+    {% for e in education %}
+    <div class="resume-education-item">
+        <span class="name">
+            {{ e.name }}
+        </span>
+        
+        <span class="institution">
+            {{ e.institution }}
+        </span>
+        
+        <span class="description">
+            {{ e.description }}
+        </span>
+    </div>
+    {% endfor %}
+</div>
