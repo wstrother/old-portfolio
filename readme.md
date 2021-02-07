@@ -1,1 +1,1 @@
-This is a simple Jekyll repository to host my portfolio and resume website. [http://wstrother.github.io](Check it out!)
+This is a simple Jekyll repository to host my portfolio and resume website. [Check it out!](http://wstrother.github.io)
