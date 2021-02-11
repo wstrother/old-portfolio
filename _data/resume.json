@@ -24,7 +24,7 @@
         {
             "name": "Python",
             "timeframe": "7 years",
-            "description": "Very strong grasp of the Python programming language for scripting as well as building modular/extensible applications for a variety of purposes, including more recently a web server and relational database with:",
+            "description": "Very strong grasp of the Python programming language for scripting as well as building modular/extensible applications for a variety of purposes, including a web server and relational database with:",
             "frameworks": [
                 {"name": "Flask/SQLAlchemy", "timeframe": "Since 2021"}
             ]

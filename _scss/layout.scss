@@ -2,11 +2,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: rgb(190, 220, 255);
 }
 
 content {
     @extend %standard-margin;
-    @include pretty-font(12pt);
+    // @include pretty-font(12pt);
     display: block;
     padding: 3px;
     width: 65%;

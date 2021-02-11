@@ -1,41 +1,152 @@
+$header-size: 20pt;
+$title-size: 16pt;
+$sub-title-size: 13pt;
+$sub2-title-size: 11.5pt;
+$body-size: 10.5pt;
+$small-size: 9pt;
+
+$lighter-color: rgb(73, 73, 73);
+
+$inner-margin: 0.5rem;
+$outer-margin: 1.5rem;
+
+@mixin paren-style($size, $dif)
+{
+    font-style: italic;
+    font-size: calc(#{$size} - $dif);
+    &::before {
+        font-style: normal;
+        content: '(';
+    }
+    &::after {
+        font-style: normal;
+        content: ')';
+    }
+}
+
+%resume-container {
+    &>*:not(:last-child) {margin-bottom: $outer-margin;}
+}
+
+// header (eg: name at the top of the resume)
+
+
 %resume-title {
-    @include pretty-font(18pt);
+    @include pretty-font($header-size);
+    font-variant: small-caps;
+    letter-spacing: 4px;
+}
+
+// each individual section (eg: summary, experience, etc.)
+
+
+%resume-section-title {
+    @include pretty-font($title-size);
+    font-variant: small-caps;
+    letter-spacing: 3.5px;
+}
+
+@mixin resume-section($name) {
+    @include pretty-font($body-size);
+    
+    display: flex;
+    flex-direction: column;
+    color: $lighter-color;
+    padding-left: 1.5rem;
+    box-sizing: border-box;
+    
+    &::before {
+        content: $name;
+        color: black;
+        @extend %resume-section-title;
+        margin-left: -1rem;
+    }
+
+    &>*:not(:last-child) {
+        margin-bottom: $inner-margin;
+    }
+}
+
+// individual items (eg: programming languages)
+
+
+%section-item-title {
+    @include pretty-font($sub-title-size);
     font-variant: small-caps;
     letter-spacing: 2px;
 }
 
-$lighter-color: rgb(73, 73, 73);
+%section-item {
+    .name { 
+        @extend %section-item-title;
+    }
+    
+    .timeframe {
+        @include paren-style($sub-title-size, 2pt);
+    }
+            
+    .description {
+        display: block;
+        @include pretty-font($body-size);
+        padding-left: 1.5rem;
+    }
+}
+        
+        
+// sub items (eg: frameworks for languages)
+
+
+%section-sub-item-title {
+    @include pretty-font($sub2-title-size);
+    font-variant: small-caps;
+    letter-spacing: 1px;
+}
+
+%section-sub-item {
+    padding-left: 2.5rem;
+    .name {@extend %section-sub-item-title;}
+    .timeframe {@include paren-style($sub2-title-size, 1pt);}
+}
+
+
+
+
+//      --------------------------------------------
+//
+//
+// overall style for element as PDF doc
 
 #resume {
-    padding: 2px;
+    background-color: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: stretch;
     align-items: center;
-
+        
     &>* {
         width: 100%;
     }
 
-    margin-bottom: 2rem;
+    @extend %resume-container;
 }
 
-$col-width: 25%;
-$row-height: 30px;
+// grid spacing for header
+$col-width: 20%;
+$row-height: 25px;
 
 .resume-header {
     display: grid;
-    grid-template-rows: repeat(3, $row-height);
+    grid-template-rows: calc(#{$row-height} + 0.5rem) repeat(2, $row-height);
     grid-template-columns: repeat(5, $col-width);
     justify-content: space-evenly;
 
     box-shadow: 0 2px 3px -2px rgba(0, 0, 0, 50);
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .resume-name {
+    display: block;
     @extend %resume-title;
-    font-size: 20pt;
 
     grid-column-start: 1;
     grid-column-end: -1;
@@ -44,22 +155,26 @@ $row-height: 30px;
     align-self: center;
 }
 
+//  sub items
 .resume-phone, .resume-email, .resume-github, .resume-website {
     display: flex;
     align-items: center;
     color: $lighter-color;
-    width: 250px;
+    @include pretty-font($small-size);
 }
 
+//  left side
 .resume-phone, .resume-email {
     grid-column-start: 2;
     justify-content: end;
 }
 
+//  right side
 .resume-github, .resume-website {
     grid-column-start: 4;
 }
 
+//  github logo
 .resume-github::before {
     content: ' ';
     display: block;
@@ -70,90 +185,33 @@ $row-height: 30px;
     padding-right: 3px;
 }
 
-@mixin resume-section($name) {
-    display: flex;
-    flex-direction: column;
-    margin-left: 1rem;
 
-    &::before {
-        content: $name;
-        color: black;
-        font-variant: small-caps;
-        @extend %resume-title;
-        margin-bottom: 5px;
-        margin-top: 10px;
-    }
 
-    margin-bottom: 10px;
-}
+
+// individual section styles
 
 .resume-summary {
     @include resume-section("Summary");
-    color: $lighter-color;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-}
-
-%items-section {
-    font-size: 11pt;
-    margin-bottom: 10px;
-    padding-left: 20%;
-    
-    .name { 
-        font-variant: small-caps;
-        letter-spacing: 1px;
-        font-size: 12pt;
-        margin-left: 5px;
-    }
-    
-    .timeframe { 
-        font-style: italic;
-        font-size: 10.5pt;
-        margin-left: 10px;
-        &::before {
-            font-style: normal;
-            content: '(';
-        }
-        &::after {
-            font-style: normal;
-            content: ')';
-        }
-    }
-
-    .description {
-        display: block;
-        margin-left: 15px;
-        margin-top: 5px;
-        margin-bottom: 5px;
-        width: 65%;
-    }
 }
 
 .resume-programming {
-    @include resume-section("Programming");
-    @extend %items-section;    
+    @include resume-section("Programming Experience");
 }
 
-
-.resume-language, .resume-other-skill {
-    margin-bottom: 15px;
+.resume-language {
+    @extend %section-item;
 }
 
 .resume-frameworks {
-    margin-left: 2rem;
-    .name { font-size: 11pt; }
+    @extend %section-sub-item;
 }
 
 .resume-other {
     @include resume-section("Other Skills");
-    @extend %items-section;
+    @extend %section-item;
 }
 
 .resume-education {
     @include resume-section("Education");
-    @extend %items-section;
-
-    .institution {
-        margin-left: 10px;
-    }
+    @extend %section-item;
 }
