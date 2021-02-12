@@ -5,30 +5,35 @@
         "links": [
             {"text": "Front End", "repo": "monster-fight-frontend"},
             {"text": "Back End", "repo": "monster-fight-backend"}
-        ]
+        ],
+        "description": "Building a web app that will allow users to sign up and play a battle sim game that resembles a popular pocket monster oriented franchise, only with a ruleset I designed for fun. Currently a work-in-progress but the first version will be deployed soon."
     },
 
     {
         "name": "ZSquirrel",
         "language": "Python",
-        "links": [{"text": "Github", "repo": "ZSquirrel-2.7"}]
+        "links": [{"text": "Github", "repo": "ZSquirrel-2.7"}],
+        "description": "A 2D game programming library I wrote in Python on top of Pygame. I haven't used it for much and it's not thoroughly documented yet but it was a good experience in working on a project with a larger code-base."
     },
 
     {
         "name": "AHP Twitch Bot",
         "language": "Python",
-        "links": [{"text": "Github", "repo": "ahp_twitch_bot"}]
+        "links": [{"text": "Github", "repo": "ahp_twitch_bot"}],
+        "description": "A Python program I built to deploy a Twitch Bot where custom commands can easily be designed with JSON. Also designed to interface with my Stream Layout app."
     },
 
     {
         "name": "AHP Stream Layout",
         "language": "Node/Javascript",
-        "links": [{"text": "Github", "repo": "ahp_stream_layout"}]
+        "links": [{"text": "Github", "repo": "ahp_stream_layout"}],
+        "description": "A very simple Node app that runs locally and provides a browser source that can be used to easily generate stream layouts styled with CSS. Also has API endpoints that can easily be called by my Twitch Bot to adjust my stream layout on the fly."
     },
 
     {
         "name": "AHP MIDI Controller",
         "language": "Python",
-        "links": [{"text": "Github", "repo": "ahp-midi-controller"}]
+        "links": [{"text": "Github", "repo": "ahp-midi-controller"}],
+        "description": "This was a fun experiment to turn any connected USB gamepad device into a MIDI controller. Built on a bundled version of my ZSquirrel library."
     }
 ]

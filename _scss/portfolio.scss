@@ -1,18 +1,55 @@
 #portfolio {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    
+    @media screen and (max-width: 500px) {
+        display: flex;
+        flex-direction: column
+    }
 }
+
+$col-width: 100px;
+$row-height: 35px;
 
 .portfolio-project {
     margin-bottom: 15px;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: $col-width auto;
+    @extend %clear-panel;
+    margin-left: 1rem;
 }
 
 .project-name {
     @include pretty-font(16pt);
+    @extend %panel-bg;
+    padding-left: 1rem;
+    padding-bottom: 5px;
     font-variant: small-caps;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.project-language {
+    @include pretty-font(12pt);
+    padding-left: 1rem;
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 
 .project-links {
     display: flex;
     flex-direction: column;
+    margin-left: 1rem;
+
+    * {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}
+
+.project-description {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    padding: 5px;
 }
