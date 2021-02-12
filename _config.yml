@@ -4,7 +4,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   
 url: "http://wstrother.github.io"
 github_username:  wstrother
-font_str: Ubuntu+Mono|Quicksand|Saira
+font_str: Quicksand:wght@300;400;500;600;700
 
 # Build settings
 sass:

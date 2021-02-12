@@ -3,9 +3,62 @@ permalink: /
 layout: page
 title: index
 ---
+<span class="welcome-banner" id="welcome-banner">
+    I already am eating from the trashcan all the time...
+</span>
 
 {%- include home.html -%}
 
 {%- include portfolio.html -%}
 
 {%- include about.html -%}
+
+<script>
+
+function getBufferScroll() {
+    return window.innerHeight * 0.5;
+}
+
+function getAdjustedHeight() {
+    return window.innerHeight * 0.25;
+}
+
+let bufferScroll = getBufferScroll();
+let adjustedHeight = getAdjustedHeight();
+
+let paused = false;
+let scrollY = 0;
+let opacity = 1;
+
+let banner = document.getElementById("welcome-banner");
+
+
+function onScroll(e) {
+    if (!paused) {
+        window.requestAnimationFrame(function() {
+            scrollY = window.scrollY - bufferScroll;
+            if (scrollY < 0) {scrollY = 0;}
+        
+            opacity = 1 - (scrollY / adjustedHeight);
+            if (opacity < 0) {opacity = 0;}
+
+            banner.style.opacity = opacity;
+            paused = false;
+        })
+
+        paused = true;
+    }
+}
+
+function onResize(e) {
+    adjustedHeight = getAdjustedHeight();
+    bufferScroll = getBufferScroll();
+    onScroll(e);
+}
+
+document.addEventListener('scroll', onScroll)
+
+window.addEventListener('resize', onResize)
+
+
+</script>

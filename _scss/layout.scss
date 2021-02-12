@@ -70,3 +70,37 @@ span.nav-link {
 }
 
 @import 'portfolio';
+
+
+$shadow-color: rgb(52, 77, 52);
+
+.welcome-banner {
+    color: fade-out($color: $shadow-color, $amount: 0.5);
+    @include pretty-font(34pt);
+    font-size: 34pt;
+    font-variant: small-caps;
+    font-weight: 600;
+    letter-spacing: 6px;
+    -webkit-text-stroke: 1px $shadow-color;
+
+    animation-name: jiggle;
+    animation-duration: 5.5s;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+@keyframes jiggle {
+    from {
+        text-shadow: 5px 0px black, -5px 0px black;
+    }
+
+    to {
+        text-shadow: 0px 5px rgba(0, 0, 0, 0.1), 0px -5px rgba(0, 0, 0, 0.1);
+    }
+}
