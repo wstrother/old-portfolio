@@ -1,7 +1,7 @@
 #portfolio {
     display: grid;
     grid-template-columns: 50% 50%;
-    
+
     @media screen and (max-width: 500px) {
         display: flex;
         flex-direction: column
@@ -14,7 +14,7 @@ $row-height: 35px;
 .portfolio-project {
     margin-bottom: 15px;
     display: grid;
-    grid-template-rows: auto;
+    grid-template-rows: $row-height auto;
     grid-template-columns: $col-width auto;
     @extend %clear-panel;
     margin-left: 1rem;
