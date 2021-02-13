@@ -77,7 +77,14 @@ $shadow-color: rgb(52, 77, 52);
 .welcome-banner {
     color: fade-out($color: $shadow-color, $amount: 0.5);
     @include pretty-font(34pt);
-    font-size: 34pt;
+
+    @media screen and (max-width: 450px) {
+        @include pretty-font(25pt);
+        line-height: 22px;
+        text-align: justify;
+        width: 95%;
+    }
+
     font-variant: small-caps;
     font-weight: 600;
     letter-spacing: 6px;
