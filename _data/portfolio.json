@@ -1,12 +1,12 @@
 [
     {
-        "name": "Monster Fight",
-        "language": "Angular (front-end) and Flask/SQLalchemy (back-end)",
+        "name": "Pokemon Battleships",
+        "language": "Angular with Google Firebase for hosting and real time database",
         "links": [
-            {"text": "Front End", "repo": "monster-fight-frontend"},
-            {"text": "Back End", "repo": "monster-fight-backend"}
+            {"text": "Website", "url": "https://battleships-94af5.web.app/"},
+            {"text": "On Github", "repo": "ahp-twitch-battleships"}
         ],
-        "description": "Building a web app that will allow users to sign up and play a battle sim game that resembles a popular pocket monster oriented franchise, only with a ruleset I designed for fun. Currently a work-in-progress but the first version will be deployed soon."
+        "description": "An application to connect two users in real time to assist in playing 'Pokemon Battleships' on Twitch!"
     },
 
     {
