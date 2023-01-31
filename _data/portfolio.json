@@ -1,5 +1,29 @@
 [
     {
+        "name": "AHP Twitch Bot",
+        "language": "Python",
+        "links": [{"text": "Github", "repo": "ahp_twitch_bot"}],
+        "description": "A Python program I built to deploy a Twitch Bot where custom commands can easily be designed with JSON. Also designed to interface with my Stream Layout app."
+    },
+
+    {
+        "name": "AHP Stream Layout",
+        "language": "Node/Javascript",
+        "links": [{"text": "Github", "repo": "ahp_stream_layout"}],
+        "description": "A very simple Node app that runs locally and provides a browser source that can be used to easily generate stream layouts styled with CSS. Also has API endpoints that can easily be called by my Twitch Bot to adjust my stream layout on the fly."
+    },
+
+    {
+        "name": "Smash Remix Bingo",
+        "language": "Vue/Javascript",
+        "links": [
+            {"text": "Website", "url": "https://wstrother.github.io/ssbr-bingo/"},
+            {"text": "Github", "repo": "ssbr-bingo"}
+        ],
+        "description": "Single page app that generates JSON for use with Bingosync to play Smash Remix Bingo"
+    },
+
+    {
         "name": "Pokemon Battleships",
         "language": "Angular with Google Firebase",
         "links": [
@@ -14,20 +38,6 @@
         "language": "Python",
         "links": [{"text": "Github", "repo": "ZSquirrel-2.7"}],
         "description": "A 2D game programming library I wrote in Python on top of Pygame. I haven't used it for much and it's not thoroughly documented yet but it was a good experience in working on a project with a larger code-base."
-    },
-
-    {
-        "name": "AHP Twitch Bot",
-        "language": "Python",
-        "links": [{"text": "Github", "repo": "ahp_twitch_bot"}],
-        "description": "A Python program I built to deploy a Twitch Bot where custom commands can easily be designed with JSON. Also designed to interface with my Stream Layout app."
-    },
-
-    {
-        "name": "AHP Stream Layout",
-        "language": "Node/Javascript",
-        "links": [{"text": "Github", "repo": "ahp_stream_layout"}],
-        "description": "A very simple Node app that runs locally and provides a browser source that can be used to easily generate stream layouts styled with CSS. Also has API endpoints that can easily be called by my Twitch Bot to adjust my stream layout on the fly."
     },
 
     {
