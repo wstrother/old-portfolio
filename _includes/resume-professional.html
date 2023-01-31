@@ -1,0 +1,39 @@
+{% assign professional = site.data.resume.professional %}
+
+<div class="resume-professional">
+
+    {% for job in professional %}
+    <div class="resume-job">
+        <span class="name">
+            {{ job.name }}
+        </span>
+        
+        <span class="timeframe">
+            {{ job.timeframe }}
+        </span>
+        
+        <span class="description">
+            {{ job.description }}
+        </span>
+        
+        {% if job.technologies %}
+        <div class="resume-frameworks">
+            
+            {% for t in job.technologies %}
+            <div class="framework">
+                <span class="name">
+                    {{ t.name }}
+                </span>
+                
+                <span class="duties">
+                    {{ t.duties }}
+                </span>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        
+    </div>
+    {% endfor %}
+
+</div>
