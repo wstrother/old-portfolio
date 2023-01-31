@@ -1,7 +1,7 @@
 [
     {
         "name": "Pokemon Battleships",
-        "language": "Angular with Google Firebase for hosting and real time database",
+        "language": "Angular with Google Firebase",
         "links": [
             {"text": "Website", "url": "https://battleships-94af5.web.app/"},
             {"text": "Github", "repo": "ahp-twitch-battleships"}

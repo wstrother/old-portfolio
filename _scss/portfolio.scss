@@ -14,16 +14,16 @@ $col-width: 150px;
     margin-bottom: 15px;
     display: grid;
     grid-template-columns: $col-width auto;
+    grid-template-rows: 45px 35px auto;
     @extend %clear-panel;
     margin-left: 1rem;
+    padding-bottom: 1rem;
 }
 
 .project-name {
     @include pretty-font(16pt);
     @extend %panel-bg;
     padding: 5px 5px 5px 1rem;
-    margin-bottom: 0.5rem;
-    height: 34px;
     font-variant: small-caps;
     grid-column-start: 1;
     grid-column-end: 3;
@@ -31,8 +31,10 @@ $col-width: 150px;
 
 .project-language {
     @include pretty-font(12pt);
-    padding-left: $col-width;
+
+    padding-left: 1rem;
     margin-bottom: 0.5rem;
+
     grid-column-start: 1;
     grid-column-end: 3;
 }

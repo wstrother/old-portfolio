@@ -9,13 +9,13 @@
     <div id="portfolio">
         {% for project in portfolio %}
         <div class="portfolio-project">
-            <span class="project-name">
+            <div class="project-name">
                 {{ project.name }}
-            </span>
+            </div>
     
-            <span class="project-language">
+            <div class="project-language">
                 {{ project.language}}
-            </span>
+            </div>
     
             <div class="project-links">
                 {% for link in project.links %}
