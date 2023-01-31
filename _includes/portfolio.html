@@ -19,19 +19,19 @@
     
             <div class="project-links">
                 {% for link in project.links %}
-
-                {% if link.repo %}
-                <a class="github-link" href="https://github.com/wstrother/{{ link.repo }}">
-                    {{ link.text }}
-                </a>
-                {% endif %}
-
-                {% if link.url %}
-                <a class="github-link" href="{{ link.url }}">
-                    {{ link.text }}
-                </a>
-                {% endif %}
-
+                <div>
+                    {% if link.repo %}
+                    <a class="github-link" href="https://github.com/wstrother/{{ link.repo }}">
+                        {{ link.text }}
+                    </a>
+                    {% endif %}
+    
+                    {% if link.url %}
+                    <a class="github-link" href="{{ link.url }}">
+                        {{ link.text }}
+                    </a>
+                    {% endif %}
+                </div>
                 {% endfor %}
             </div>
     

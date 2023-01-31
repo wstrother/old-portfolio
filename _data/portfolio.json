@@ -4,7 +4,7 @@
         "language": "Angular with Google Firebase for hosting and real time database",
         "links": [
             {"text": "Website", "url": "https://battleships-94af5.web.app/"},
-            {"text": "On Github", "repo": "ahp-twitch-battleships"}
+            {"text": "Github", "repo": "ahp-twitch-battleships"}
         ],
         "description": "An application to connect two users in real time to assist in playing 'Pokemon Battleships' on Twitch!"
     },
