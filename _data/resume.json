@@ -8,25 +8,44 @@
     },
 
 
-    "summary": "Extremely motivated and self-taught programming enthusiast that seeks to secure employment as a front-end web developer working with Javascript or Python",
+    "summary": "Extremely motivated and self-taught programming enthusiast that seeks to secure employment as a software engineer, (hopefully) working with Javascript or Python",
+
+    "professional": [
+        {
+            "name": "Reclique Solutions",
+            "timeframe": "December 2021 - December 2022",
+            "description": "Fullstack engineer with varied responsibilities including bug fixes, user support, developing new features, etc.",
+            "technologies": [
+                {"name": "MySQL", "duties": "Maintenance (imports and updates) and reporting on extensive customer databases across multiple instances"},
+                {"name": "Vue/Angular/JQuery", "duties": "Developing and debugging UI components supporting general use and customizable functionality"},
+                {"name": "CSS/LESS/HTML", "duties": "Developing views to support user functionality both natively and through integration with Wordpress/Elementor"},
+                {"name": "PHP 7-8", "duties": "Extensive use of PHP to develop user functionality as well as API endpoints, third party integrations, server side processes, etc."},
+                {"name": "Excel", "duties": "Extensive use of Excel to manage data and prepare imports of maintenance through SQL directly as well as Table Plus and custom tools"},
+                {"name": "Docker/Linux", "duties": "Experience using and maintaining multiple Docker instances to closely mirror production environments in development"},
+                {"name": "AWS", "duties": "Extensive use of Elastic Beanstalk to manage production instances using a Docker/Linux environment and SSH connections"}
+            ]
+        }
+    ],
 
     "programming": [
         {
             "name":  "Javascript",
-            "timeframe": "5 years",
+            "timeframe": "6 years",
             "description": "Long term experience using Javascript for DOM manipulation using native ES6 syntax and the JQuery library as well as specific frameworks/technologies such as:",
             "frameworks": [
                 {"name": "Node", "timeframe": "Since 2017"},
                 {"name": "React", "timeframe": "Since 2017"},
-                {"name": "Angular/Typescript", "timeframe": "Since 2021"}
+                {"name": "Angular/Typescript", "timeframe": "Since 2021"},
+                {"name": "Vue", "timeframe": "Since 2021"},
+                {"name": "Svelte", "timeframe": "Since 2022"}
             ]
         },
         {
             "name": "Python",
-            "timeframe": "7 years",
+            "timeframe": "8 years",
             "description": "Very strong grasp of the Python programming language for scripting as well as building modular/extensible applications for a variety of purposes, including a web server and relational database with:",
             "frameworks": [
-                {"name": "Flask/SQLAlchemy", "timeframe": "Since 2021"}
+                {"name": "Flask/SQL Alchemy", "timeframe": "Since 2021"}
             ]
         },
         {
@@ -39,18 +58,19 @@
             "timeframe": "5 years",
             "description": "Experience using PHP to dynamically generate web pages and REST APIs, as well as relational databases with:",
             "frameworks": [
-                {"name": "Laravel", "timeframe": "Since 2017"}
+                {"name": "Laravel", "timeframe": "Since 2017"},
+                {"name": "Wordpress", "timeframe": "Since 2022"}
             ]
         },
         {
-            "name": "SQL",
+            "name": "MySQL",
             "timeframe": "5 years",
-            "description": "Understanding of relational databases fundamentals including using ORM libraries to generate database models and building REST APIs that can be employed by front end web applications"
+            "description": "Understanding of relational databases fundamentals for use with REST APIs, as well as more intricate querying for data analysis, maintenance and optimization"
         },
         {
-            "name": "Git/Github",
-            "timeframe": "5 years",
-            "description": "Strong grasp of usign Git and Github for version control, including branching repositories to add new features and merging and resolving conflicts"
+            "name": "Git/Github/Gitlab",
+            "timeframe": "6 years",
+            "description": "Strong grasp of Git and Github/Gitlab for version control, including branching repositories to add new features and merging and resolving conflicts"
         }
     ],
 
