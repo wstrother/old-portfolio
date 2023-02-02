@@ -2,7 +2,10 @@
     {
         "name": "AHP Twitch Bot",
         "language": "Python",
-        "links": [{"text": "Github", "repo": "ahp_twitch_bot"}],
+        "links": [
+            {"text": "Website", "url": "https://wstrother.github.io/ahp_twitch_bot_site"},
+            {"text": "Github", "repo": "ahp_twitch_bot"}
+        ],
         "description": "A Python program I built to deploy a Twitch Bot where custom commands can easily be designed with JSON. Also designed to interface with my Stream Layout app."
     },
 
